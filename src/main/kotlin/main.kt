@@ -70,7 +70,15 @@ object WallService {
         }
         throw NoPost("Пост удален или не существует")
     }
+
+    fun printPost() {
+        for (post in posts) {
+            println(post)
+        }
+        println()
+    }
 }
+
 
 fun main() {
     WallService.add(
@@ -85,6 +93,8 @@ fun main() {
         canClose = false,
         canOpen = false
     ),1)
+
+    WallService.printPost()
 
 }
 
